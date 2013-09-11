@@ -59,61 +59,83 @@ Repository Layout
 This repository will serve as the central source of my work. I intend to split 
 much of it into the following heirarchy:
 
-* /src - will hold source code for interfacing between the hardware and the USB 
-serial port, as well as any other daemons or verifyer code written.
-* /doc - will hold documentation specific to the software held in /src, as 
-well as the general principles of random number generation and verification 
-as discovered in /research.
-* /research - will hold a bibliography of sources found and investigated 
-throughout the project. Research journal will be held here.
-* /hw - will hold schematics, netlists, models, and any other information 
-pertaining to the hardware aspects of the project.
-* /tests - will hold testing suites. In particular, it is looking like 
-dieharder is an excellent RNG stress-tester, and I intend to develop a perl 
-scripted test suite that interfaces between the software, the outputted 
+* /src - will hold source code for interfacing between the hardware and the USB
+  serial port, as well as any other daemons or verifyer code written.
+* /doc - will hold documentation specific to the software held in /src, as well
+  as the general principles of random number generation and verification as
+discovered in /research.
+* /research - will hold a bibliography of sources found and investigated
+  throughout the project. Research journal will be held here.
+* /hw - will hold schematics, netlists, models, and any other information
+  pertaining to the hardware aspects of the project.
+* /tests - will hold testing suites. In particular, it is looking like
+  dieharder is an excellent RNG stress-tester, and I intend to develop a perl
+scripted test suite that interfaces between the software, the outputted
 bitstream, and any other ready-made testing suites such as dieharder.
 
 Project Roadmap
 ===============
 
+The final deliverable should be a hardware RNG that has at least the following 
+characteristics:
+
+* Functioning prototype that is outputting bits to the host, preferably with a
+  throughput measured in kilobytes.
+* A host that is able to read these bitstreams
+* A host that can perform verification of the bitstream to ensure true
+  randomness
+* Inclusion of bitsream into entropy pool with a throughput rate that is
+  greater than that of a stock linux kernel building entropy via hardware
+  noise.
+* **[ideal, but likely to bleed into second semester of design sequence]**
+  bitstream randomness verification on the hardware side rather than software.
+
 ##Main Goals:
 
-1.) **[continuous]** Research. Research. And Research Some More. Understand
-common sources of randomness: heat noise, avalanche noise, clock jitter.
+1. **[continuous]** Research. Research. And Research Some More. Understand
+   common sources of randomness: heat noise, avalanche noise, clock jitter.
 Understand common pitfalls: biasing, correlation, drift-over-time. Understand
 and replicate previous designs to verify conclusions given by said research.
 Understand the mathematical foundations of randomness and the various
 statistical analyses that go into detecting and verifying it.
 
-2.) **[completed by end of september]** Establish verification pipeline early.
-Ensure that it can take any given input bitstream, process it, and output
++ **[completed by end of September]** Establish verification pipeline early.
+  Ensure that it can take any given input bitstream, process it, and output
 randomness characteristics. Implement Perl testing script if necessary to
 manage this pipeline. Ensure that verification is mathematically sound.
 
-3.) **[completed by end of september]** Have software for reading bitstream of
-USB input ready and functional.  High likelihood that Linux kernel already has
-everything necessary from the host end. Make sure it works. Mainly, make sure
-we can get bitstream off hardware and ultimately into /dev/random or a
++ **[completed by end of September]** Have software for reading bitstream of
+  USB input ready and functional.  High likelihood that Linux kernel already
+has everything necessary from the host end. Make sure it works. Mainly, make
+sure we can get bitstream off hardware and ultimately into /dev/random or a
 customized /dev/customRandom entropy pool.
 
-4.) **[ideally started in september, at latest by beginning of october. Continue
-until project deadline]** Prototype numerous iterations of the block diagram,
++ **[ideally started in September, at latest by beginning of October.  Continue
+  until project deadline]** Prototype numerous iterations of the block diagram,
 specifically with three noise sources: heat noise, avalanche noise, and clock
-jitter. Collect statistical data about their randomness characteristics and
-plot it. Iterate quickly to discover sources of problems, and be prepared to
-leave designs active for weeks if not months on end if initial results look
-promising (initial research indicates that current drift over time has the
-capability to skew a once-random bitstream into a non-random state). Compare
-properties of our custom entropy pool to standard entropy pools.
+jitter. Collect statistical data about their randomness characteristics --most
+likely via verification software like dieharder on the host-- and plot it.
+Iterate quickly to discover sources of problems, and be prepared to leave
+designs active for weeks if not months on end if initial results look promising
+(initial research indicates that current drift over time has the capability to
+skew a once-random bitstream into a non-random state). Compare properties of
+our custom entropy pool to standard entropy pools.
+
++ **[November to project deadline]** Ensure that microcontroller --or any other
+  hardware implementation-- is able to detect nonrandom bitstreams and refuse
+to output them to the host. If we are unable to do this in hardware, the
+design's throughput becomes substantially limited, as the software on the host
+to perform verification is very resource intensive. This last part of the
+effort is likely to bleed into the second semester of work. 
 
 ##Stretch Goals:
 
-5.) **[continuous]** Investigate popular software PRNGs and ubiquitous hardware
-RNGs for possible backdoors. 
+1. **[continuous]** Investigate popular software PRNGs and ubiquitous hardware
+   RNGs for possible backdoors. 
 
-6.) **[continuous]** Demonstrate the importance of proper random number
-generation by crafting viable attacks of cryptosystems with compromised sources
-of randomness.
++ **[continuous]** Demonstrate the importance of proper random number
+  generation by crafting viable attacks of cryptosystems with compromised
+sources of randomness.
 
 Project Block Diagram
 =====================
