@@ -81,14 +81,15 @@ characteristics:
 
 * Functioning prototype that is outputting bits to the host, preferably with a
   throughput measured in kilobytes.
-* A host that is able to read these bitstreams
+* A host that is able to read these bitstreams.
 * A host that can perform verification of the bitstream to ensure true
-  randomness
+  randomness.
 * Inclusion of bitsream into entropy pool with a throughput rate that is
   greater than that of a stock linux kernel building entropy via hardware
   noise.
 * **[ideal, but likely to bleed into second semester of design sequence]**
-  bitstream randomness verification on the hardware side rather than software.
+  Bitstream randomness verification on the hardware side rather than software.
+If bitstream is not random, have hardware refuse to output it to host.
 
 ##Main Goals:
 
