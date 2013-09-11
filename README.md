@@ -40,8 +40,8 @@ humanity under article 19 of the UDHR. Citizens are not immune from NSL
 sabotage --and I am certainly not immune from incomptence that could compromise
 the project either-- but I can most certainly promise that, as a genuine person
 --and not merely a legal fiction such as a corporation-- I will fight any such
-attempts with all of the tools and resources available to me in the face of
-opposition, including threats of unjust imprisonment.
+attempts with all of the tools and resources available to me, even in the face
+of opposition --including threats of unjust imprisonment.
 
 Senior Design Team
 ==================
