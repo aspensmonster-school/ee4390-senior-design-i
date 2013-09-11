@@ -76,7 +76,7 @@ bitstream, and any other ready-made testing suites such as dieharder.
 Project Roadmap
 ===============
 
-#Main Goals:
+##Main Goals:
 
 1.) *[continuous]* Research. Research. And Research Some More. Understand
 common sources of randomness: heat noise, avalanche noise, clock jitter.
@@ -106,7 +106,7 @@ promising (initial research indicates that current drift over time has the
 capability to skew a once-random bitstream into a non-random state). Compare
 properties of our custom entropy pool to standard entropy pools.
 
-#Stretch Goals:
+##Stretch Goals:
 
 5.) *[continuous]* Investigate popular software PRNGs and ubiquitous hardware
 RNGs for possible backdoors. 
