@@ -78,26 +78,26 @@ Project Roadmap
 
 ##Main Goals:
 
-1.) *[continuous]* Research. Research. And Research Some More. Understand
+1.) **[continuous]** Research. Research. And Research Some More. Understand
 common sources of randomness: heat noise, avalanche noise, clock jitter.
 Understand common pitfalls: biasing, correlation, drift-over-time. Understand
 and replicate previous designs to verify conclusions given by said research.
 Understand the mathematical foundations of randomness and the various
 statistical analyses that go into detecting and verifying it.
 
-2.) *[completed by end of september]* Establish verification pipeline early.
+2.) **[completed by end of september]** Establish verification pipeline early.
 Ensure that it can take any given input bitstream, process it, and output
 randomness characteristics. Implement Perl testing script if necessary to
 manage this pipeline. Ensure that verification is mathematically sound.
 
-3.) *[completed by end of september]* Have software for reading bitstream of
+3.) **[completed by end of september]** Have software for reading bitstream of
 USB input ready and functional.  High likelihood that Linux kernel already has
 everything necessary from the host end. Make sure it works. Mainly, make sure
 we can get bitstream off hardware and ultimately into /dev/random or a
 customized /dev/customRandom entropy pool.
 
-4.) *[ideally started in september, at latest by beginning of october. Continue
-until project deadline]* Prototype numerous iterations of the block diagram,
+4.) **[ideally started in september, at latest by beginning of october. Continue
+until project deadline]** Prototype numerous iterations of the block diagram,
 specifically with three noise sources: heat noise, avalanche noise, and clock
 jitter. Collect statistical data about their randomness characteristics and
 plot it. Iterate quickly to discover sources of problems, and be prepared to
@@ -108,10 +108,10 @@ properties of our custom entropy pool to standard entropy pools.
 
 ##Stretch Goals:
 
-5.) *[continuous]* Investigate popular software PRNGs and ubiquitous hardware
+5.) **[continuous]** Investigate popular software PRNGs and ubiquitous hardware
 RNGs for possible backdoors. 
 
-6.) *[continuous]* Demonstrate the importance of proper random number
+6.) **[continuous]** Demonstrate the importance of proper random number
 generation by crafting viable attacks of cryptosystems with compromised sources
 of randomness.
 
