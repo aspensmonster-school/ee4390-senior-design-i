@@ -99,31 +99,31 @@ and replicate previous designs to verify conclusions given by said research.
 Understand the mathematical foundations of randomness and the various
 statistical analyses that go into detecting and verifying it.
 
-+ **[completed by end of September]** Establish verification pipeline early.
-  Ensure that it can take any given input bitstream, process it, and output
+2. **[completed by end of September]** Establish verification pipeline early.
+   Ensure that it can take any given input bitstream, process it, and output
 randomness characteristics. Implement Perl testing script if necessary to
 manage this pipeline. Ensure that verification is mathematically sound.
 
-+ **[completed by end of September]** Have software for reading bitstream of
-  USB input ready and functional.  High likelihood that Linux kernel already
+3. **[completed by end of September]** Have software for reading bitstream of
+   USB input ready and functional.  High likelihood that Linux kernel already
 has everything necessary from the host end. Make sure it works. Mainly, make
 sure we can get bitstream off hardware and ultimately into /dev/random or a
 customized /dev/customRandom entropy pool.
 
-+ **[ideally started in September, at latest by beginning of October.  Continue
-  until project deadline]** Prototype numerous iterations of the block diagram,
-specifically with three noise sources: heat noise, avalanche noise, and clock
-jitter. Collect statistical data about their randomness characteristics --most
-likely via verification software like dieharder on the host-- and plot it.
-Iterate quickly to discover sources of problems, and be prepared to leave
-designs active for weeks if not months on end if initial results look promising
-(initial research indicates that current drift over time has the capability to
-skew a once-random bitstream into a non-random state). Compare properties of
-our custom entropy pool to standard entropy pools.
+4. **[ideally started in September, at latest by beginning of October.
+   Continue until project deadline]** Prototype numerous iterations of the
+block diagram, specifically with three noise sources: heat noise, avalanche
+noise, and clock jitter. Collect statistical data about their randomness
+characteristics --most likely via verification software like dieharder on the
+host-- and plot it.  Iterate quickly to discover sources of problems, and be
+prepared to leave designs active for weeks if not months on end if initial
+results look promising (initial research indicates that current drift over time
+has the capability to skew a once-random bitstream into a non-random state).
+Compare properties of our custom entropy pool to standard entropy pools.
 
-+ **[November to project deadline]** Ensure that microcontroller --or any other
-  hardware implementation-- is able to detect nonrandom bitstreams and refuse
-to output them to the host. If we are unable to do this in hardware, the
+5. **[November to project deadline]** Ensure that microcontroller --or any
+   other hardware implementation-- is able to detect nonrandom bitstreams and
+refuse to output them to the host. If we are unable to do this in hardware, the
 design's throughput becomes substantially limited, as the software on the host
 to perform verification is very resource intensive. This last part of the
 effort is likely to bleed into the second semester of work. 
@@ -133,8 +133,8 @@ effort is likely to bleed into the second semester of work.
 1. **[continuous]** Investigate popular software PRNGs and ubiquitous hardware
    RNGs for possible backdoors. 
 
-+ **[continuous]** Demonstrate the importance of proper random number
-  generation by crafting viable attacks of cryptosystems with compromised
+2. **[continuous]** Demonstrate the importance of proper random number
+   generation by crafting viable attacks of cryptosystems with compromised
 sources of randomness.
 
 Project Block Diagram
