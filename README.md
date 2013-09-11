@@ -76,20 +76,28 @@ bitstream, and any other ready-made testing suites such as dieharder.
 Project Roadmap
 ===============
 
+The deliverables and goals are enumerated below.
+
+##Deliverables:
+
 The final deliverable should be a hardware RNG that has at least the following 
 characteristics:
 
 * Functioning prototype that is outputting bits to the host, preferably with a
-  throughput measured in kilobytes.
-* A host that is able to read these bitstreams.
+  throughput measured in kilobytes. Prototype should be constructable by hand
+(no mass manufacturing).
+* A host that is able to read these bitstreams with Free software.
 * A host that can perform verification of the bitstream to ensure true
-  randomness.
+  randomness with Free software.
 * Inclusion of bitsream into entropy pool with a throughput rate that is
   greater than that of a stock linux kernel building entropy via hardware
   noise.
 * **[ideal, but likely to bleed into second semester of design sequence]**
   Bitstream randomness verification on the hardware side rather than software.
 If bitstream is not random, have hardware refuse to output it to host.
+* **[ideal, but likely to bleed into second semester of design sequence]**
+  Hardware that is fully open and verifiable. Use of open cores rather than
+proprietary ones.
 
 ##Main Goals:
 
@@ -126,13 +134,13 @@ Compare properties of our custom entropy pool to standard entropy pools.
    other hardware implementation-- is able to detect nonrandom bitstreams and
 refuse to output them to the host. If we are unable to do this in hardware, the
 design's throughput becomes substantially limited, as the software on the host
-to perform verification is very resource intensive. This last part of the
-effort is likely to bleed into the second semester of work. 
+to perform verification is very resource intensive. **This last part of the
+effort is likely to bleed into the second semester of work.**
 
 ##Stretch Goals:
 
 1. **[continuous]** Investigate popular software PRNGs and ubiquitous hardware
-   RNGs for possible backdoors. 
+   RNGs for possible backdoors or other weaknesses.
 
 2. **[continuous]** Demonstrate the importance of proper random number
    generation by crafting viable attacks of cryptosystems with compromised
