@@ -1,0 +1,11 @@
+Compile pdf via:
+
+$ pdflatex Research-Log.tex
+$ bibtex Research-Log.aux
+$ pdflatex Research-Log.tex
+$ pdflatex Research-Log.tex
+
+If something goes wrong, just start over after trying to fix it. Run this 
+to delete all temporary files:
+
+$ rm *.aux *.bbl *.blg *.log *.out *.toc

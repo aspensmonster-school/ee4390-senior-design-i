@@ -1,0 +1,126 @@
+# evaulating a TRNG in hardware
+
+@article{000321520700011n.d.,
+Abstract = {True Random Number Generators have many uses, in particular they play a key role in security applications and cryptographic algorithms. Our interest lies in the quality of their generated random numbers. More specifically, for such utilizations, a slight deviation of the numbers from a "perfect" behavior can have disastrous consequences. It is then necessary to devise schemes for the testing of these generators in order to detect non-random properties of their numbers. Moreover, one should consider them from an attacker point of view and use any means to try to perturbate their good functionnality. In this article we describe such experiments and several standard statistical tools for the generators testing. We also present experimental results obtained through the study of a generator embedded in a processor in order to illustrate our methodology. We show that its pertubation leads to the apparition of dangerous deviations in its numbers distribution.},
+Author = {Soucarros, M and Clediere, J and Dumas, C and Elbaz-Vincent, P},
+ISSN = {09238174},
+Journal = {JOURNAL OF ELECTRONIC TESTING-THEORY AND APPLICATIONS},
+Keywords = {True random number generator, Perturbation, Statistical tests, Temperature, Laser, Frequency injection, Radioactivity, X-rays, ENGINEERING, ELECTRICAL & ELECTRONIC},
+Number = {3},
+Pages = {367 - 381},
+Title = {Fault Analysis and Evaluation of a True Random Number Generator Embedded in a Processor.},
+Volume = {29},
+URL = {http://libproxy.txstate.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=edswsc&AN=000321520700011&site=eds-live&scope=site},
+Year = {n.d.},
+}
+
+# noise resistant TRNG made on 65-nm prototype. has stochastic model to 
+# aid in parameter choices
+
+@article{000322026900007n.d.,
+Abstract = {This paper presents a worst-case-aware design methodology for an oscillator-based true random number generator (TRNG) that produces highly random bit streams even under deterministic noise. We propose a stochastic behavior model to efficiently determine design parameters, and identify a class of deterministic noise under which the randomness gets the worst. They can be used to directly estimate the worst chi value of a poker test under deterministic noise without generating bit streams, which enables efficient exploration of design space and guarantees sufficient randomness in a hostile environment. The proposed model is validated by measuring prototype TRNGs fabricated with a 65-nm CMOS process.},
+Author = {Amaki, T and Hashimoto, M and Mitsuyama, Y and Onoye, T},
+ISSN = {15566013},
+Journal = {IEEE TRANSACTIONS ON INFORMATION FORENSICS AND SECURITY},
+Keywords = {True random number generator, Markov chain, stochastic model, Jitter, COMPUTER SCIENCE, THEORY & METHODS, ENGINEERING, ELECTRICAL & ELECTRONIC},
+Number = {8},
+Pages = {1331 - 1342},
+Title = {A Worst-Case-Aware Design Methodology for Noise-Tolerant Oscillator-Based True Random Number Generator With Stochastic Behavior Modeling.},
+Volume = {8},
+URL = {http://libproxy.txstate.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=edswsc&AN=000322026900007&site=eds-live&scope=site},
+Year = {n.d.},
+}
+
+# importance of RNG in GIS applications
+
+@article{6082794820110401,
+Abstract = {This article considers the results of Van Niel, K. and Laffan, S. W. 2003. Gambling with randomness; the use of pseudo-random number generators in GIS. International Journal of Geographical Information Science, 17, 49-68 and demonstrates flaws in their analysis and discusses the implications of these. In conclusion, it argues that difficulties with random number generators may have been overemphasised in Van Niel, K. and Laffan, S. W. 2003. Gambling with randomness; the use of pseudo-random number generators in GIS. International Journal of Geographical Information Science, 17, 49-68 and that it may make more practical sense to focus on the model formulation and analysis rather than the technical choice of one random number generator over another. In particular, it argues that the choice of random number generator should occur at the analysis stage, rather than relying on empirical verification. [ABSTRACT FROM AUTHOR]},
+Author = {Barry, Simon C.1, simon.barry@csiro.au},
+ISSN = {13658816},
+Journal = {International Journal of Geographical Information Science},
+Keywords = {Random number generators, Geographic information systems, Spatial analysis (Statistics), Van Niel, K., Laffan, S. W., International Journal of Geographical Information Science (Periodical), random number generators, simulation, spatial analysis},
+Number = {4},
+Pages = {523 - 530},
+Title = {How much impact does the choice of a random number generator really have?.},
+Volume = {25},
+URL = {http://libproxy.txstate.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=aci&AN=60827948&site=eds-live&scope=site},
+Year = {2011},
+}
+
+# A "ring"-based RNG. Claims nonlinearity of behaviour defeats modelling attacks.
+
+@article{6102549620110515,
+Abstract = {In this paper we propose a new architecture Physical Random Functions (or Physical Unclonable Functions, PUFs) to create a candidate hardware random number generator. So far several random number generators based on ring oscillators were introduced but all of them have either security or stability problems. This paper presents a novel architecture which has solved both of these problems. This idea have a higher data complexity and also nonlinearity which secures the circuit against modeling attacks. The final architecture has also lower hardware complexity which make it suitable for lightweight random number generators. [ABSTRACT FROM AUTHOR]},
+Author = {Ayat, Mehdi1, Mehdiayat2006@gmail.com and Atani, Reza Ebrahimi2, mkuchaki@guilan.ac.ir and Mirzakuchaki, Sattar1, rebrahimi@guilan.ac.ir},
+ISSN = {09755934},
+Journal = {International Journal of Multimedia \& Its Applications},
+Keywords = {Computer security, Computer architecture, Random number generators, Computers, Data security, Mathematical models, Computer input-output equipment, Computational complexity, Nonlinear models (Statistics), Physical Cryptography, Physical Unclonable Functions, Random Number Generator},
+Number = {3},
+Pages = {30 - 40},
+Title = {ON DESIGN OF PUF-BASED RANDOM NUMBER GENERATORS.},
+Volume = {3},
+URL = {http://libproxy.txstate.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=aci&AN=61025496&site=eds-live&scope=site},
+Year = {2011},
+}
+
+# investigates three implementations of RNG on an FPGA (LFSR, LCG, Blum Blum Shub)
+
+@article{8288132620110601,
+Abstract = {Random numbers are useful for a variety of purposes, such as generating data encryption keys, simulating and modeling complex phenomena and for selecting random samples from larger data sets. They have also been used aesthetically, for example in literature and music, and are of course ever popular for games and gambling. When discussing single numbers, a random number is one that is drawn from a set of possible values, each of which is equally probable, i.e., a uniform distribution. Random numbers are generated by various methods. The two types of generators used for random number generation are pseudo random number generator (PRNG) and true random number generator (TRNG). In this paper we have used computational method through three techniques i.e., linear feedback shift register, linear congruental generator and blum blum shub. It is simulated and synthesized using VHDL on the Xilinx ISE 9.1i [ABSTRACT FROM AUTHOR]},
+Author = {Kumar, Jay1, jaykumar_1981@yahoo.co.in and Shukla, Sudhanshu1, sudhanshu.swastik@gmail.com and Prakash, Dhiraj1, engineerdhiraj@gmail.com and Mishra, Pratyush1, prt.mis174@gmail.com and Kumar, Sudhir1, sudhir.agra09@gmail.com},
+ISSN = {22314946},
+Journal = {International Journal of Computer Applications in Engineering Sciences},
+Keywords = {Random number generators, Data encryption (Computer science), Random numbers, Sampling (Statistics), VHDL (Computer hardware description language), Computer hardware description languages, Keyword: Random number generator, pseudonumber, simulated, synthesized, VHDL},
+Number = {2},
+Pages = {127 - 129},
+Title = {Random Number Generator Using Various Techniques through VHDL.},
+Volume = {1},
+URL = {http://libproxy.txstate.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=aci&AN=82881326&site=eds-live&scope=site},
+Year = {2011},
+}
+
+# Non-Uniform RNG. Good documentation of the statistics involved in verifying NU-RNG. Presumably this could be ported to U-RNG.
+
+@article{8704557320120101,
+Abstract = {Nonuniform random numbers are key for many technical applications, and designing efficient hardware implementations of nonuniform random number generators is a very active research field. However, most state-of-the-art architectures are either tailored to specific distributions or use up a lot of hardware resources. At ReConFig 2010, we have presented a new design that saves up to 48% of area compared to state-of-the-art inversion-based implementation, usable for arbitrary distributions and precision. In this paper, we introduce a more flexible version together with a refined segmentation scheme that allows to further reduce the approximation error significantly. We provide a free software tool allowing users to implement their own distributions easily, and we have tested our random number generator thoroughly by statistic analysis and two application tests. [ABSTRACT FROM AUTHOR]},
+Author = {de Schryver, Christian1, schryver@eit.uni-kl.de and Schmidt, Daniel1 and Wehn, Norbert1 and Korn, Elke2 and Marxen, Henning2 and Kostiuk, Anton2 and Korn, Ralf2},
+ISSN = {16877195},
+Journal = {International Journal of Reconfigurable Computing},
+Keywords = {Computer input-output equipment, Random number generators, Distribution (Probability theory), Application software, Computer architecture, Approximation error},
+Pages = {1 - 11},
+Title = {A Hardware Efficient Random Number Generator for Nonuniform Distributions with Arbitrary Precision.},
+URL = {http://libproxy.txstate.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=aci&AN=87045573&site=eds-live&scope=site},
+Year = {2012},
+}
+
+# "Data-oriented" RNG? RNG with uniform, normal, exponential, chi-square distributions. Interesting, but unsure how relevant it may be.
+
+@article{8762674520130201,
+Abstract = {Data-oriented is new and applied theory which provides method that models the concepts with data structure. If the concept is modeled by using sufficient data in modeling, required inferences and calculations can be done fast with less complexity. Random variable was modeled with digital probability graph, by using Ahmad Fact and probability density function. Some data-oriented random generators have been presented based on data-oriented approach. In this paper a universal data-oriented random number generator is introduced which is able to generate random numbers with uniform, normal, exponential and chi-square distributions. [ABSTRACT FROM AUTHOR]},
+Author = {Farjami Nezhad, Rasoul1, r.f.nejad@gmail.com and Effatparvar, Mehdi2, effatparvar@iauardabil.ac.ir and Rahimzadeh, Mohammad3, mgs_mohammad@engineer.com},
+ISSN = {20750161},
+Journal = {International Journal of Modern Education \& Computer Science},
+Keywords = {Random number generators, Probability theory, Data structures (Computer science), Random variables, Probability density function, Ahmad fact, Data-oriented, Digit bank, Probability Tree, Random variable},
+Number = {2},
+Pages = {19 - 24},
+Title = {Designing a Universal Data-Oriented Random Number Generator.},
+Volume = {5},
+URL = {http://libproxy.txstate.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=aci&AN=87626745&site=eds-live&scope=site},
+Year = {2013},
+}
+
+# GPU Accelerated Scalable Parallel Random Number Generators (GASPRNG). Cool stuff, but uses CUDA (non-free).
+
+@article{000315974100018n.d.,
+Abstract = {Graphics processors represent a promising technology for accelerating computational science applications. Many computational science applications require fast and scalable random number generation with good statistical properties, so they use the Scalable Parallel Random Number Generators library (SPRNG). We present the GPU Accelerated SPRNG library (GASPRNG) to accelerate SPRNG in GPU-based high performance computing systems. GASPRNG includes code for a host CPU and CUDA code for execution on NVIDIA graphics processing units (CPUs) along with a programming interface to support various usage models for pseudorandom numbers and computational science applications executing on the CPU, GPU, or both. This paper describes the implementation approach used to produce high performance and also describes how to use the programming interface. The programming interface allows a user to be able to use GASPRNG the same way as SPRNG on traditional serial or parallel computers as well as to develop },
+Author = {Gao, S and Peterson, GD},
+ISSN = {00104655},
+Journal = {COMPUTER PHYSICS COMMUNICATIONS},
+Keywords = {GPGPU, Pseudorandom number generator, SPRNG, Monte Carlo, COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS, PHYSICS, MATHEMATICAL},
+Number = {4},
+Pages = {1241 - 1249},
+Title = {GASPRNG: GPU accelerated scalable parallel random number generator library.},
+Volume = {184},
+URL = {http://libproxy.txstate.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=edswsc&AN=000315974100018&site=eds-live&scope=site},
+Year = {n.d.},
+}

@@ -1,0 +1,94 @@
+%% stripped down version of "bare_jrnl.tex" for use in EE3370. 
+%% Original version has very good comments for use. You should check it out at
+%% http://www.ieee.org/publications_standards/publications/authors/authors_journals.html
+%% I run GNU/Linux so I downloaded the "Unix LaTeX2e Transactions Style File"
+%% package and based my work off of the sample tex file named "bare_jrnl.tex".
+
+% original author info below (this guy's a rockstar for making his comments 
+% so easy to use :P)
+%% 2007/01/11
+%% by Michael Shell
+%% see http://www.michaelshell.org/
+%% for current contact information.
+
+\documentclass[journal]{IEEEtran}
+% make sure "IEEEtran.cls" is in the path of the tex file you are working on
+
+%graphics package for adding images
+\ifCLASSINFOpdf
+  \usepackage[pdftex]{graphicx}
+\else
+   \usepackage[dvips]{graphicx}
+\fi
+
+%math package for math equations
+\usepackage[cmex10]{amsmath}
+
+%float package for putting images where I fucking tell them to go
+\usepackage{float}
+
+%for sourcecode
+%\usepackage{listings}
+%\lstset{breaklines=true,language=gnuplot,basicstyle=\scriptsize,showspaces=false,showstringspaces=false}
+
+%For hyperlinks
+\usepackage{hyperref}
+
+%For strikethrough ([normalem] option preserves italicising via emph)
+\usepackage[normalem]{ulem}
+
+\begin{document}
+
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{Research Journal for Preston Maness during Senior Design I: 
+A Hardware Random Number Generator}
+\author{Preston~Maness}
+
+% header
+\markboth{Texas State University, Dr. Stapleton, EE4390, Senior Design I}%
+{}
+
+% make the title area
+\maketitle
+
+% Give the abstract of your lab here
+\begin{abstract}
+Just a dummy abstract here. Probably won't actually use an abstract for the 
+journal.
+\end{abstract}
+
+\tableofcontents
+
+\section{Initial Research - What I've Found}
+
+\IEEEPARstart{B}{lah} blah blah... List of sources below. Going to keep 
+adding text in here so that the itemize list doesn't get shoved up into 
+the fancy 'B' character of "Blah."
+
+\begin{itemize}
+\item
+\cite{000321520700011n.d.} Evaluating a TRNG in hardware.
+\item
+\cite{000322026900007n.d.} Noise resistant TRNG. Stochastic model for parameter choicing.
+\item
+\cite{6082794820110401} Importance of RNG choice in GIS applications.
+\item
+\cite{6102549620110515} Ring-based RNG. Huh? What's that?
+\item
+\cite{8288132620110601} Investigating LFSR, LCG, and Blum Blum Shub on 
+Xilinx FPGA
+\item
+\cite{8704557320120101} Non-Uniform RNG, Statistics of.
+\item
+\cite{8762674520130201} "Data-oriented" RNG? Not sure what this is about, but it mentions 
+making distributions of random numbers with different characteristics (uniform, chi-squared, 
+etc)
+\item
+\cite{000315974100018n.d.} GPU Accelerated Scalable Parallel RNG.
+\end{itemize}
+
+\bibliography{IEEEabrv,works-cited}{}
+\bibliographystyle{IEEEtran}
+
+\end{document}
