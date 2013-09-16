@@ -1,3 +1,24 @@
 This folder will hold all of the source code for the project, including any 
 testing suites, host controllers, firmware for hardware microcontrollers, 
 and any other software written in support of the project.
+
+== Dieharder ==
+
+I don't currently know of a good way of "bundling" dieharder or otherwise 
+testing for/expecting it in the host enivironment. For now, I am going to 
+include the source tarball releases in my repo and build them locally 
+for testing.
+
+$ tar -xzvf dieharder-3.31.1.tgz
+$ cd dieharder-3.31.1
+$ libtoolize -f
+$ ./autogen.sh
+$ make
+
+The build system seems at least a little wonky. I have to `libtoolize -f` 
+in order for `make` to succeed. I'm not yet familiar enough with the GNU
+autotools to tell you what's wrong with the configure.ac or Makefile.am 
+input files.
+
+Regardless, the software should build and then leave a functional `dieharder`
+binary in the dieharder folder.
