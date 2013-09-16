@@ -60,6 +60,26 @@ journal.
 
 \tableofcontents
 
+\section{Sunday September 15 2013}
+
+Was able to get dieharder compiled and running. Can feed in both /dev/urandom 
+and a binary file of random, unsigned, 32-bit int's generated from Perl's 
+rand() function. While /dev/urandom is passing most tests --it is marked
+WEAK in others-- it seems that generating even a million random ints is 
+not sufficient for dieharder. It will generate output stating that it "rewound"
+the file anywhere from tens of times to hundreds of times. Of course when 
+it rewinds the file it is no longer "random" and so the tests fail. Good to 
+know.
+
+As well, it is becoming apparent that I will need to develop a rigourous 
+statistical understanding of randomness. I should also familiarize myself with 
+the GNU Scientific Library, as dieharder integrates tightly with it.
+
+Regardless, I have the RNG stress-tester up and running. Now I need to focus 
+on perhaps making a randomness bitstream a la /dev/customRandom, as our 
+RNG will ultimately be speaking over a serial line and into the host that 
+will then put the raw bits here.
+
 \section{Initial Research - What I've Found}
 
 \IEEEPARstart{B}{lah} blah blah... List of sources below. Going to keep 
