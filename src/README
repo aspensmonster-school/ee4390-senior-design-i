@@ -22,3 +22,14 @@ input files.
 
 Regardless, the software should build and then leave a functional `dieharder`
 binary in the dieharder folder.
+
+== Testing Dieharder ==
+
+1.) cat /dev/urandom | dieharder OPTIONS
+
+This is the easiest way.
+
+2.) cat file.bin | dieharder OPTIONS
+
+Also nice. However, file.bin must be a raw bitstream of 32-bit unsigned 
+integers.
