@@ -80,6 +80,22 @@ on perhaps making a randomness bitstream a la /dev/customRandom, as our
 RNG will ultimately be speaking over a serial line and into the host that 
 will then put the raw bits here.
 
+\section{Thursday September 19 2013}
+
+Found an outstanding link on random noise generation using avalanche 
+breakdown. He even utilized ngspice in the simulation process! This should 
+prove to be an outstanding guidepost. Judging by his work, there's a good 
+chance that avalanche noise might be the best source to work with if 
+construction by hand is a requirement.
+
+\url{http://holdenc.altervista.org/avalanche/}
+
+Still reading. It looks like he's covered all the fundamental bases I wanted 
+to cover. If his work proves to speed up mine considerably, I should 
+consider investigating parallelizing these designs and having a 
+microcontroller for de-skewing and de-biasing this semester, rather than 
+second semester.
+
 \section{Initial Research - What I've Found}
 
 \IEEEPARstart{B}{lah} blah blah... List of sources below. Going to keep 
