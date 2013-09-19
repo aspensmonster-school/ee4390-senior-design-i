@@ -96,7 +96,16 @@ consider investigating parallelizing these designs and having a
 microcontroller for de-skewing and de-biasing this semester, rather than 
 second semester.
 
-Going to test his netlist on my installation of ngspice now.
+Going to test his netlist on my installation of ngspice now. Getting similar 
+results. That's good.
+
+However, looking at his schematic it looks like he's throwing enough voltage 
+at the 2N3904's to kill them over time, though I could be reading it wrong. I 
+suspect you'd need some heat sinking to keep them cool enough, but he's not 
+exactly throwing a lot of current at them either. 
+
+When the current is changed, Vazzana states that ``the noise `pattern' seems to
+change on the oscilloscope.'' Will need to investigate this fully.
 
 \section{Initial Research - What I've Found}
 
