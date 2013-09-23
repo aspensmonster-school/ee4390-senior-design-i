@@ -96,6 +96,60 @@ consider investigating parallelizing these designs and having a
 microcontroller for de-skewing and de-biasing this semester, rather than 
 second semester.
 
+Going to test his netlist on my installation of ngspice now. Getting similar 
+results. That's good.
+
+However, looking at his schematic it looks like he's throwing enough voltage 
+at the 2N3904's to kill them over time, though I could be reading it wrong. I 
+suspect you'd need some heat sinking to keep them cool enough, but he's not 
+exactly throwing a lot of current at them either. 
+
+When the current is changed, Vazzana states that ``the noise `pattern' seems to
+change on the oscilloscope.'' Will need to investigate this fully.
+
+\url{http://http.developer.nvidia.com/GPUGems3/gpugems3_ch37.html}
+
+The NVIDIA link has a nice list of references I should look into.
+
+\section{September 23 2013}
+
+Been thinking about how to get this rapidly prototyped. The end of September 
+is a lot closer than it seems. I don't want to fall behind schedule. For 
+now, I'm looking into having an externally powered RNG that outputs its serial 
+bitstream to something like a Rasberry Pi or an Arduino UNO. I own both of 
+these pieces of hardware. I'm curious to see if I can accomplish debiasing 
+and decorrelating with either of these bits of kit. I can then push out the 
+purified bitstream over USB. Both of these devices have libraries available to 
+take an input bitstream and send out a modified stream to a host via USB.
+
+\url{https://github.com/infomaniac50/Random}
+
+It looks like infomaniac50 is several steps ahead of me. Sidenote: It seems 
+everyone is several steps ahead of me. I should think about how I can 
+distinguish my work. The availability of the work of others means I should be 
+able to get up and prototyping within the week. How can I take advantage of 
+the additional time to produce a unique addition to this body of work? I'm 
+leaning toward using several RNGs in parallel and then using a suitably fast 
+uC to manipulate it into a single, high-speed bitstream over USB 2.0.
+
+Anyway... infomaniac50's got an arduino library that takes the input from an
+RNG and debiases it. It should be simple enough to extend this library and 
+have it output the bitstream over USB to a host. As well, it's licensed 
+under the CC-AT-SA 3.0 Unported license. I don't know if this is compatible 
+off the top of my head; my understanding is that CC licenses aren't really 
+meant to cover code.
+
+After that, it's just a matter of familiarizing myself with the internals of 
+the Linux kernel to get a bitstream from a /dev/USB device into /dev/urandom 
+or some other custom entropy pool (like /dev/myCustomEntropyPool).
+
+Having some pretty graphs that show how much entropy is in this pool at any 
+given time would be nice. Have a graph that shows how much entropy is used 
+up during entropy-intensive processes. Ideally, we shouldn't be losing much 
+entropy --that is to say, the hardware RNG should be able to keep up. In 
+reality, I suspect my first Marks to not be able to keep up with dieharder's 
+entropy demands.
+
 \section{Initial Research - What I've Found}
 
 \IEEEPARstart{B}{lah} blah blah... List of sources below. Going to keep 

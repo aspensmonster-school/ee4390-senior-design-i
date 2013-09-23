@@ -23,7 +23,8 @@ input files.
 Regardless, the software should build and then leave a functional `dieharder`
 binary in the dieharder folder.
 
-== Testing Dieharder ==
+Testing Dieharder
+=================
 
 1.) cat /dev/urandom | dieharder OPTIONS
 
@@ -33,3 +34,16 @@ This is the easiest way.
 
 Also nice. However, file.bin must be a raw bitstream of 32-bit unsigned 
 integers.
+
+NOTES
+=====
+
+Some of the dieharder tests STILL rewind even with 4GB of random data. One 
+of them rewound something like 60 times. 
+
+60x4 = 240 GB = AIN'T NOBODY GOT SPACE FOR THAT!
+
+The tests definitely run faster on the SSD on my laptop. But I don't have 
+240GB to work with on my laptop. Will have to figure out a decent solution 
+to this. Work from Vazzana implies that testing a RNG that outputs in kilobits 
+per second could take hours if not days when using dieharder.
