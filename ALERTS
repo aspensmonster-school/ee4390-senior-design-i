@@ -1,0 +1,7 @@
+Mon. Sep. 30 2013
+=================
+
+All parts are in to begin prototyping the RNG proposed by will begin
+prototyping later today and ideally have oscope pictures and preliminary 
+dieharder test suite results if the RNG->Arduino->Host dependencies can get 
+squared away.
