@@ -1,7 +1,7 @@
 Mon. Sep. 30 2013
 =================
 
-All parts are in to begin prototyping the RNG proposed by will begin
+All parts are in to begin prototyping the RNG proposed by Vazanna. Will begin
 prototyping later today and ideally have oscope pictures and preliminary 
 dieharder test suite results if the RNG->Arduino->Host dependencies can get 
-squared away.
+squared away. Infomaniac50's work should help with teh Arduino->Host aspect.
