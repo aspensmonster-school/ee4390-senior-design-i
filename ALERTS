@@ -5,3 +5,19 @@ All parts are in to begin prototyping the RNG proposed by Vazanna. Will begin
 prototyping later today and ideally have oscope pictures and preliminary 
 dieharder test suite results if the RNG->Arduino->Host dependencies can get 
 squared away. Infomaniac50's work should help with teh Arduino->Host aspect.
+
+Mon. Nov. 4 2013
+================
+
+Who am I kidding. October flew by with hardly any work getting done. The 
+other four courses have been eating up all my time. However, I'm doing well 
+in them and plan on shifting gears for a little bit. I can afford to let 
+a few things slide. But really, I need to get a physical prototype up and 
+running ASAP. I've been running through simulations, and thought of a 
+rather interesting chicken and egg issue:
+
+If I'm building a hardware RNG, then how can I trust any simulation designed 
+to test such an RNG without having a hardware RNG providing the noise to 
+the simulator? How does the simulator handle noise at all? Going to add 
+this to the research log. I think this is a good example of how simulation 
+only goes so far.
