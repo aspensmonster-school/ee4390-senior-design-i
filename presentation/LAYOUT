@@ -1,0 +1,17 @@
+Presentation:
+
+* Title (Maness, 1.4, Hardware RNG)
+* Motivation (Snowden Revelations, PRNG compromise)
+* Why (Familiarize myself with one aspect of modern cryptographic systems)
+* Highlight that this has been done before. A lot. Emphasize that scientific 
+  method is applied copiously in order to verify the previous work.
+* General: The RNG outputs random bits to an arduino which then pushes the bits
+  to a host machine that analyzes them for their randomness.
+* Slide on Hardware Stack (BJT->OpAmps->Comparator->Arduino->Host).
+* Slide on Software Stack (Arduino, Linux, Perl, ngspice/gschem).
+* Deliverables (Prototype, testing harness all hooked up).
+* Timeline (See README in root of repo).
+* Status: Prototype functional. Sending bits to host. Preliminary tests 
+  indicate the bitstream is random.
+* Next Semester: Parallelize with multiple different sources. High-Speed 
+  sampling. On-chip verification of randomness.
