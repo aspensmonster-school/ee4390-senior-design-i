@@ -6,16 +6,20 @@ void setup() {
 void loop() {
 
   int count = 0;
+  int buffer[32];
+  int i = 0;
+  int j = 0;
   
-  while(1) {
+  for(i ; i < 32 ; i++) {
     unsigned int val = digitalRead(2);
-    Serial.print(val);
-    count++;
-    if (count == 80) {
-      Serial.print("\n");
-      count = 0;
-    }
-    delay(10);
- }
+    buffer[i] = val;
+  }
+  for(j ; j < 32 ; j++) {
+    Serial.print(buffer[j]);
+  }
+  
+  Serial.print("\n");
+    
+  delay(10);
  
 }
