@@ -1,0 +1,6 @@
+The RNG is spitting out bits now that I've got the comparator ``working.'' 
+I can send this data to the arduino on a digital port, and the arduino then 
+sends data over serial to the host. Once initialized by running minicom to 
+connect to the arduino (and then leave) I am able to `cat /dev/ttyACM0` and 
+get a stream of ones and zeros. Not yet up to scratch on testing them 
+however.
