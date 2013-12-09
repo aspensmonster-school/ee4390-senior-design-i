@@ -7,8 +7,14 @@ Presentation:
   method is applied copiously in order to verify the previous work.
 * General: The RNG outputs random bits to an arduino which then pushes the bits
   to a host machine that analyzes them for their randomness.
+* General: Various statistical tests are performed on the bitstream to 
+  determine randomness. Since I am no statistician, I rely on the tools of 
+  the experts to fulfill this role. Namely, dieharder, a software suite for 
+  use in testing RNGs by putting them through a battery of tests designed to 
+  push a candidate RNG to ``unambiguous failure.''
 * Slide on Hardware Stack (BJT->OpAmps->Comparator->Arduino->Host).
 * Slide on Software Stack (Arduino, Linux, Perl, ngspice/gschem).
+* Budget (Basically the price of the components at this point).
 * Deliverables (Prototype, testing harness all hooked up).
 * Timeline (See README in root of repo).
 * Status: Prototype functional. Sending bits to host. Preliminary tests 
