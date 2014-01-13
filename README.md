@@ -1,3 +1,10 @@
+Second Semester Update
+======================
+
+The below readme has been updated with information on the status of various 
+deliverables. One may also review the presentation in the presentation/ 
+directory for thorough information on the status of the project.
+
 Senior Design Introduction
 ==========================
 
@@ -72,6 +79,8 @@ discovered in /research.
   dieharder is an excellent RNG stress-tester, and I intend to develop a perl
 scripted test suite that interfaces between the software, the outputted
 bitstream, and any other ready-made testing suites such as dieharder.
+* /presentation - holds presentation files from presentations made at the end
+  of each semester.
 
 Project Roadmap
 ===============
@@ -83,21 +92,21 @@ The deliverables and goals are enumerated below.
 The final deliverable should be a hardware RNG that has at least the following 
 characteristics:
 
-* Functioning prototype that is outputting bits to the host, preferably with a
-  throughput measured in kilobytes. Prototype should be constructable by hand
-(no mass manufacturing).
-* A host that is able to read these bitstreams with Free software.
-* A host that can perform verification of the bitstream to ensure true
-  randomness with Free software.
-* Inclusion of bitsream into entropy pool with a throughput rate that is
-  greater than that of a stock linux kernel building entropy via hardware
-  noise.
-* **[ideal, but likely to bleed into second semester of design sequence]**
-  Bitstream randomness verification on the hardware side rather than software.
-If bitstream is not random, have hardware refuse to output it to host.
-* **[ideal, but likely to bleed into second semester of design sequence]**
-  Hardware that is fully open and verifiable. Use of open cores rather than
-proprietary ones.
+* **(COMPLETE)**Functioning prototype that is outputting bits to the host,
+  preferably with a throughput measured in kilobytes. Prototype should be
+constructable by hand (no mass manufacturing).
+* **(COMPLETE)**A host that is able to read these bitstreams with Free
+  software.
+* **(COMPLETE)**A host that can perform verification of the bitstream to ensure
+  true randomness with Free software.
+* **(IN-PROGRESS)**Inclusion of bitsream into entropy pool with a throughput
+  rate that is greater than that of a stock linux kernel building entropy via
+hardware noise.
+* **(IN-PROGRESS)**Bitstream randomness verification on the hardware side
+  rather than software.  If bitstream is not random, have hardware refuse to
+output it to host.
+* **(IN-PROGRESS)**Hardware that is fully open and verifiable. Use of open
+  cores rather than proprietary ones.
 
 ##Main Goals:
 
@@ -108,34 +117,32 @@ and replicate previous designs to verify conclusions given by said research.
 Understand the mathematical foundations of randomness and the various
 statistical analyses that go into detecting and verifying it.
 
-2. **[completed by end of September]** Establish verification pipeline early.
-   Ensure that it can take any given input bitstream, process it, and output
-randomness characteristics. Implement Perl testing script if necessary to
-manage this pipeline. Ensure that verification is mathematically sound.
+2. **(COMPLETE)** Establish verification pipeline early.  Ensure that it can
+   take any given input bitstream, process it, and output randomness
+characteristics. Implement Perl testing script if necessary to manage this
+pipeline. Ensure that verification is mathematically sound.
 
-3. **[completed by end of September]** Have software for reading bitstream of
-   USB input ready and functional.  High likelihood that Linux kernel already
-has everything necessary from the host end. Make sure it works. Mainly, make
-sure we can get bitstream off hardware and ultimately into /dev/random or a
-customized /dev/customRandom entropy pool.
+3. **(COMPLETE)** Have software for reading bitstream of USB input ready and
+   functional.  High likelihood that Linux kernel already has everything
+necessary from the host end. Make sure it works. Mainly, make sure we can get
+bitstream off hardware and ultimately into /dev/random or a customized
+/dev/customRandom entropy pool.
 
-4. **[ideally started in September, at latest by beginning of October.
-   Continue until project deadline]** Prototype numerous iterations of the
-block diagram, specifically with three noise sources: heat noise, avalanche
-noise, and clock jitter. Collect statistical data about their randomness
-characteristics --most likely via verification software like dieharder on the
-host-- and plot it.  Iterate quickly to discover sources of problems, and be
-prepared to leave designs active for weeks if not months on end if initial
-results look promising (initial research indicates that current drift over time
-has the capability to skew a once-random bitstream into a non-random state).
-Compare properties of our custom entropy pool to standard entropy pools.
+4. **(IN-PROGRESS)** Prototype numerous iterations of the block diagram,
+   specifically with three noise sources: heat noise, avalanche noise, and
+clock jitter. Collect statistical data about their randomness characteristics
+--most likely via verification software like dieharder on the host-- and plot
+it.  Iterate quickly to discover sources of problems, and be prepared to leave
+designs active for weeks if not months on end if initial results look promising
+(initial research indicates that current drift over time has the capability to
+skew a once-random bitstream into a non-random state).  Compare properties of
+our custom entropy pool to standard entropy pools.
 
-5. **[November to project deadline]** Ensure that microcontroller --or any
-   other hardware implementation-- is able to detect nonrandom bitstreams and
-refuse to output them to the host. If we are unable to do this in hardware, the
-design's throughput becomes substantially limited, as the software on the host
-to perform verification is very resource intensive. **This last part of the
-effort is likely to bleed into the second semester of work.**
+5. **(IN-PROGRESS)**Ensure that microcontroller --or any other hardware
+   implementation-- is able to detect nonrandom bitstreams and refuse to output
+them to the host. If we are unable to do this in hardware, the design's
+throughput becomes substantially limited, as the software on the host to
+perform verification is very resource intensive. 
 
 ##Stretch Goals:
 
