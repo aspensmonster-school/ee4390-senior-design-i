@@ -2,10 +2,10 @@ Second Semester Update
 ======================
 
 The below readme has been updated with information on the status of various 
-deliverables and schedule. As of now, the project is outputting bits to a
-GNU/Linux host, but the bits are failing randomness tests. This weekend is
-scheduled to investigate signal integrity, particularly at the comparator
-stage, as I suspect it may be improperly wired.
+deliverables and schedule (in the Project Roadmap section). As of now, the
+project is outputting bits to a GNU/Linux host, but the bits are failing
+randomness tests. This weekend is scheduled to investigate signal integrity,
+particularly at the comparator stage, as I suspect it may be improperly wired.
 
 One may also review the presentation in the presentation/ directory for
 thorough information on the *history* of the project, though all important
