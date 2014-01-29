@@ -6,3 +6,9 @@ UPDATE:
 
 I've got the perl code and modified arduino code written. Both compile. Onto 
 testing.
+
+UPDATE2:
+
+I've now got Perl reading the arduino serial directly and the arduino 
+doing digitalreads and spitting them out in byte-sized chunks. Calling it a 
+night. Still don't have the RNG operating properly though. 
