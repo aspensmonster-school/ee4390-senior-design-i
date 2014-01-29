@@ -43,7 +43,7 @@ while (1) {
 
 #    print Dumper($byte);
 
-    #store the binary in a file. 'C' is the code for unsigned char.
+    #store the binary in a file. 'a' is just a generic, "string" datatype.
     print $outputFile pack('a',$byte);
 
   }
