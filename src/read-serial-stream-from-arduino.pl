@@ -3,27 +3,20 @@
 use warnings;
 use strict;
 
-use Device::SerialPort::Arduino
+use Device::SerialPort;
 
-my $arduino = Device::SerialPort::Arduino->new(
+my $arduino = Device::SerialPort->new(
 
   port => '/dev/ttyUSB0',
   baudrate => 9600,
   databits => 8,
-  parity => none,
+  parity => 'none',
 
 );
 
-my $count = 0;
-
 while (1) {
 
-  print $Arduino->receive();
-  $count++;
-  if ( $count == 32 ) {
-
-    $count = 0;
-
-  }
+  print $arduino->receive();
+  #This will probably spit out lots of binary junk into my terminal.
 
 }
