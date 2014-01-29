@@ -4,28 +4,46 @@ use warnings;
 use strict;
 
 use Device::SerialPort;
+use Data::Dumper;
 
 # Set up the arduino.
-my $arduino = Device::SerialPort->new(
+my $arduino = Device::SerialPort->new("/dev/ttyACM0") || 
+die "Can't open serial port.\n";
 
-  port => '/dev/ttyUSB0',
-  baudrate => 9600,
-  databits => 8,
-  parity => 'none',
+$arduino->baudrate(9600);
+$arduino->databits(8);
+$arduino->parity('none');
+$arduino->stopbits(1);
 
-);
+my $name = "output";
 
 #set up the destination file where the raw binary is stored.
-open(my $outputFile, '>:raw', 'arduino_output.bin') or die "Can't open: $!";
+open(my $outputFile, '>', $name) or die "Can't open: $!";
+
+$outputFile->autoflush(1);
+
+#apparently aquiring /dev/tty.whatever reboots the arduino. should wait 
+#"a few seconds" for it to be ready.
+
+print "Waiting for arduino to be ready.\n";
+
+sleep(3);
 
 #Start capturing bytes.
 while (1) {
 
-  #This will probably spit out lots of binary junk into my terminal.
-  my $byte = $arduino->receive;
-  print $byte;
+  my $byte;
+  $byte = $arduino->read(1);
 
-  #store the binary in a file. 'C' is the code for unsigned char.
-  print $outputFile pack('C', $byte);
+  if ( defined($byte) && length($byte) ) {
+
+    print "Value: " , $byte, "\n";
+
+#    print Dumper($byte);
+
+    #store the binary in a file. 'C' is the code for unsigned char.
+    print $outputFile pack('a',$byte);
+
+  }
 
 }
