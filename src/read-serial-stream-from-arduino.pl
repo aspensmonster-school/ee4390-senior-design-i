@@ -20,6 +20,8 @@ my $name = "output";
 #set up the destination file where the raw binary is stored.
 open(my $outputFile, '>', $name) or die "Can't open: $!";
 
+#if you don't do this then the contents get held in a buffer until the file 
+#closes. As you can see, the file never closes! Shame on me...
 $outputFile->autoflush(1);
 
 #apparently aquiring /dev/tty.whatever reboots the arduino. should wait 
