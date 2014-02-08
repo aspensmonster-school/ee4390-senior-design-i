@@ -1,18 +1,10 @@
-Sat. 08 Feb. 2014:
+Week 3:
 
-Going to fiddle around with just a comparator to make sure I'm not making 
-some really stupid mistake in understanding how it works. Possible other 
-problem: What is the input impedance on a digital port of the Arudino Uno? 
-Perhaps the signal is just sticking on the output of the comparator rather 
-than hopping over to the arduino digitial IO port. Hmm... I'll keep that in 
-mind.
+The goal of week 3 is to resolve the signal integrity issue. Initial probing 
+with the scope shows that indeed, the comparator is the problem. Signal 
+looks good up until it enters the comparator. 
 
-In other news...
-
-I got one of these:
-
-http://micro-nova.com/mercury
-
-I might try to use it when I parallelize the RNG implementation. Would also
-give me more experience with HDLs and HVLs (and of course FPGAs).
-
+As of Tuesday February 04 2014 at 1531 CST, I have yet to rewire the 
+comparator. This is scheduled for later tonight. Once rewired, I should be 
+getting a functional bitstream that passes initial tests. Don't know if I'll 
+get to that tonight or not though.
