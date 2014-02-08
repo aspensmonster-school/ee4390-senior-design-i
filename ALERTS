@@ -1,10 +1,12 @@
-Mon. Sep. 30 2013
+Sat. Feb. 08 2014
 =================
 
-All parts are in to begin prototyping the RNG proposed by Vazanna. Will begin
-prototyping later today and ideally have oscope pictures and preliminary 
-dieharder test suite results if the RNG->Arduino->Host dependencies can get 
-squared away. Infomaniac50's work should help with teh Arduino->Host aspect.
+I got one of these:
+
+http://micro-nova.com/mercury
+
+I might try to use it when I parallelize the RNG implementation. Would also 
+give me more experience with HDLs and HVLs (and of course FPGAs).
 
 Mon. Nov. 4 2013
 ================
@@ -21,3 +23,11 @@ to test such an RNG without having a hardware RNG providing the noise to
 the simulator? How does the simulator handle noise at all? Going to add 
 this to the research log. I think this is a good example of how simulation 
 only goes so far.
+
+Mon. Sep. 30 2013
+=================
+
+All parts are in to begin prototyping the RNG proposed by Vazanna. Will begin
+prototyping later today and ideally have oscope pictures and preliminary 
+dieharder test suite results if the RNG->Arduino->Host dependencies can get 
+squared away. Infomaniac50's work should help with teh Arduino->Host aspect.
