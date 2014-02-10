@@ -40,3 +40,14 @@ clears things up going into the comparator.
 
 Nope. Shit. Time for a rebuild. Note to self: I think this aptly demonstrates 
 the utility of having a testing protocol.
+
+UPDATE: Mon. 10 Feb. 2014 1717:
+
+I didn't want to tear everything down, so I started tracing back even 
+further. It looks like the unity and gain op amps are fine. I traced back the 
+source of the hum to the virtual ground op amp. Still trying to figure out 
+how to get rid of this. 
+
+DING DING DING DING DING! The problem was with the capacitors. I don't know 
+if one of them got unseated or was shorting with another component, but after 
+reseating each of them I got back to where I was before.
