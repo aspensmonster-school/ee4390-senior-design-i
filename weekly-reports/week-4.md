@@ -37,3 +37,6 @@ parts. Frustrating!
 
 Scratch that. Going to try just swapping out the TL082 and see if that 
 clears things up going into the comparator.
+
+Nope. Shit. Time for a rebuild. Note to self: I think this aptly demonstrates 
+the utility of having a testing protocol.
