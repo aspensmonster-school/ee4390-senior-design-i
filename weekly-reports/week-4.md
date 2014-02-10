@@ -34,3 +34,6 @@ dead.
 ALSO: The signal isn't getting amplified! Talk about frustrating. I think 
 a component might be totally dead. Going to rebuild the whole thing with new 
 parts. Frustrating!
+
+Scratch that. Going to try just swapping out the TL082 and see if that 
+clears things up going into the comparator.
