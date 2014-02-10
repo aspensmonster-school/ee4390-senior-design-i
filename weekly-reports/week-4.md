@@ -16,3 +16,9 @@ http://micro-nova.com/mercury
 I might try to use it when I parallelize the RNG implementation. Would also 
 give me more experience with HDLs and HVLs (and of course FPGAs). 
 
+UPDATE: Sun. 09 Feb. 2014:
+
+Finally got around to setting up the scope.
+
+Dafuq? I'm getting nothing but 60 Hz hum out of the op-amp! Noise is still 
+good.
