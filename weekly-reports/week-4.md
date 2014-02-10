@@ -22,3 +22,15 @@ Finally got around to setting up the scope.
 
 Dafuq? I'm getting nothing but 60 Hz hum out of the op-amp! Noise is still 
 good.
+
+UPDATE: Sun. 09 Feb. 2014 2226:
+
+Ok. Stupid me. Thought I had the probe grounded. Didn't. But still, I'm 
+getting absolutely no signal past the R5 resistor (12K) that links the two 
+op-amps. Put the multimeter on it and got practically no current AT ALL, even 
+in the microampere range. It's almost like the node that particular node is 
+dead.
+
+ALSO: The signal isn't getting amplified! Talk about frustrating. I think 
+a component might be totally dead. Going to rebuild the whole thing with new 
+parts. Frustrating!
