@@ -51,3 +51,26 @@ how to get rid of this.
 DING DING DING DING DING! The problem was with the capacitors. I don't know 
 if one of them got unseated or was shorting with another component, but after 
 reseating each of them I got back to where I was before.
+
+UPDATE: Mon. 10 Feb. 2014 2017:
+
+Who the fuck am I kidding. Apparently, the noise just comes and goes as it 
+pleases. However, it does seem to distinguish itself most prominently over 
+the decoupling cap between the unity buffer and the amplifier. On one end 
+of the cap lead, the signal looks great. On the other, I either get what 
+looks like a 60 Hz square wave or a triangle wave.
+
+Looking into these problems more, and given their seemingly random nature, I 
+think what I'm running into is a ground loop. Which is another thing that one 
+of the judges from TI mentioned during the presentation last semester. Of 
+course, I didn't know what that meant, so it kinda went in one ear and out the 
+other. Other possibilities from research are noise coupling due to long 
+leads on components and the power supply lines (which are about 4 feet long 
+coming out of the bench PSU).
+
+See the following:
+
+http://www.electro-tech-online.com/threads/ground-loop-horrible-feedback.101498/
+
+http://web.mit.edu/~jhawk/tmp/p/EST016_Ground_Loops_handout.pdf
+
