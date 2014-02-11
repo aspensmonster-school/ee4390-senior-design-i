@@ -138,3 +138,29 @@ falls between 1 Vpp, but the outliers do in fact hit about 1.6 Vpp.
 Perhaps the real dense distribution is even LESS than 20mV. If it were, say, 
 12mV, then 12mV * 83 gives 1.079 Vpp, much closer to what I'm observing on the 
 scope.
+
+===========================================
+
+UPDATE: Mon. 10 Feb. 2014 2226:
+
+Ok. Now things are starting to look at least a bit better. I'm no longer 
+getting just 0x0000FFFF when reading the serial from the arduino. I'm finally 
+starting to get some data other than that, I'd say about 2-5 percent comes 
+out to an ASCII character other than the '.' character. This is consistent 
+with the scope, which shows most of the output being high most of the time. 
+
+It also looks like I'm definitly getting 60 Hz hum on the comparator, though 
+thankfully, no longer on the analog portion of the design. So, after an 
+entire weekend PLUS Monday, I can finally get around to what I wanted to do 
+to start with:
+
+Figure out the comparator.
+
+Though I guess it's good that I got all these other signal integrity issues 
+squared away. Learned a lot about analog design and op amps from the 
+experience. Well, learned a little. Given all the problems I ran into I'm 
+starting to think that Electronics II really ought to be a requirement for all 
+Electrical Engineering majors, including those with Computer Engineering 
+specialty. Or perhaps not required, but at least give some introduction to 
+op amps from a practical standpoint (maybe leave out all the heavy theory 
+behind them and how they're design at the transistor level).
