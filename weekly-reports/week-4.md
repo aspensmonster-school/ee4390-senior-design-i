@@ -16,12 +16,16 @@ http://micro-nova.com/mercury
 I might try to use it when I parallelize the RNG implementation. Would also 
 give me more experience with HDLs and HVLs (and of course FPGAs). 
 
+===========================================
+
 UPDATE: Sun. 09 Feb. 2014:
 
 Finally got around to setting up the scope.
 
 Dafuq? I'm getting nothing but 60 Hz hum out of the op-amp! Noise is still 
 good.
+
+===========================================
 
 UPDATE: Sun. 09 Feb. 2014 2226:
 
@@ -41,6 +45,8 @@ clears things up going into the comparator.
 Nope. Shit. Time for a rebuild. Note to self: I think this aptly demonstrates 
 the utility of having a testing protocol.
 
+===========================================
+
 UPDATE: Mon. 10 Feb. 2014 1717:
 
 I didn't want to tear everything down, so I started tracing back even 
@@ -51,6 +57,8 @@ how to get rid of this.
 DING DING DING DING DING! The problem was with the capacitors. I don't know 
 if one of them got unseated or was shorting with another component, but after 
 reseating each of them I got back to where I was before.
+
+===========================================
 
 UPDATE: Mon. 10 Feb. 2014 2017:
 
@@ -74,6 +82,8 @@ http://www.electro-tech-online.com/threads/ground-loop-horrible-feedback.101498/
 
 http://web.mit.edu/~jhawk/tmp/p/EST016_Ground_Loops_handout.pdf
 
+===========================================
+
 UPDATE: Mon. 10 Feb. 2014 2042:
 
 I suspect my signals are still there, but are getting drowned out by 60 Hz hum 
@@ -84,6 +94,8 @@ I still don't know why I had it working temporarily. I thought swapping caps
 was the answer, but I still get the noise now! Ugh. Frustrating. Going to 
 try giving each IC a bypass cap to sort things out.
 
+===========================================
+
 UPDATE: Mon. 10 Feb. 2014 2105:
 
 FFFFFFFUUUUUUUUUUUU. When I was mucking around with the caps, I accidentally 
@@ -92,3 +104,10 @@ ground, it was on the virtual ground line itself. I think I can say
 with confidence now that the noise problem has been identified and eliminated.
 
 Now, onto getting a functional binary bitstream.
+
+===========================================
+
+UPDATE: Mon. 10 Feb. 2014 2126:
+
+Ok. That's weird. I can't seem to amplify the signal more than about 3x. 
+Interesting.
