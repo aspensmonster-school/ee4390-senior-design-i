@@ -111,3 +111,30 @@ UPDATE: Mon. 10 Feb. 2014 2126:
 
 Ok. That's weird. I can't seem to amplify the signal more than about 3x. 
 Interesting.
+
+===========================================
+
+UPDATE: Mon. 10 Feb. 2014 2205:
+
+I think I've been measuring Vpp for the noise spread incorrectly. I always 
+measured from the absolute farthest I ever saw the noise go, even though the 
+majority of the noise signal was more tightly bounded. For example:
+
+For my noise generator, I have an absolute maximum Vpp of 100mV. However, the 
+more tightly bounded distribution was more like a maximum Vpp of 20mV. 
+
+When I upped the gain from 10 to 83 (120k/12k to 1M/12k), I got a MUCH better
+signal out of the amp, damn near perfectly 1 Vpp. This would line up with my
+observations. When I had 10 for the gain, it looked like I was only going from
+100 mVpp to anywhere from 200 to 300 mVpp, 2-3 gain rather than 10. However, if
+I instead measured from the more tightly bound distribution of 20 mVpp, I would
+get what I was reading for the gain of 10: about 200 mVpp. 
+
+And of course, after amplifying by 83, I get about 20 mVpp * 83 = 1.66 Vpp. I 
+don't know why I'm only getting about 1 Vpp rather than 1.66, but perhaps I 
+am again measuring something wrong. The majority of the amplified distribution 
+falls between 1 Vpp, but the outliers do in fact hit about 1.6 Vpp. 
+
+Perhaps the real dense distribution is even LESS than 20mV. If it were, say, 
+12mV, then 12mV * 83 gives 1.079 Vpp, much closer to what I'm observing on the 
+scope.
