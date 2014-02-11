@@ -74,3 +74,21 @@ http://www.electro-tech-online.com/threads/ground-loop-horrible-feedback.101498/
 
 http://web.mit.edu/~jhawk/tmp/p/EST016_Ground_Loops_handout.pdf
 
+UPDATE: Mon. 10 Feb. 2014 2042:
+
+I suspect my signals are still there, but are getting drowned out by 60 Hz hum 
+from... somewhere. The signal degradation seems to get worse with each 
+decoupling capacitor in the signal path.
+
+I still don't know why I had it working temporarily. I thought swapping caps 
+was the answer, but I still get the noise now! Ugh. Frustrating. Going to 
+try giving each IC a bypass cap to sort things out.
+
+UPDATE: Mon. 10 Feb. 2014 2105:
+
+FFFFFFFUUUUUUUUUUUU. When I was mucking around with the caps, I accidentally 
+misplaced one of the pins. The bypass cap on the virtual ground wasn't on 
+ground, it was on the virtual ground line itself. I think I can say 
+with confidence now that the noise problem has been identified and eliminated.
+
+Now, onto getting a functional binary bitstream.
