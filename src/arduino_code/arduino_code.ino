@@ -17,6 +17,6 @@ void loop() {
   
 //  Serial.write(randomByte);
 
-  delay(10);
+//  delay(10);
  
 }
