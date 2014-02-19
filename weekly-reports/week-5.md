@@ -32,3 +32,8 @@ comparator. After doing that, I've got a nice, clean 5V and 0V line. And the
 data is now starting to look somewhat random. Still getting what (seems) to be 
 some pattern though. Going to let it collect for tonight and see what 
 dieharder says about the sequence in the morning.
+
+UPDATE: Tuesday February 18 2014 1842:
+
+Nevermind. Found source of problem. Still got 60 Hz hum on the comparator. 
+Going to try throwing a decoupling cap on the Vcc-Gnd pins.
