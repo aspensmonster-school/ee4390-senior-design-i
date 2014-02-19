@@ -51,3 +51,19 @@ just my imagination though. It's not noticable enough to really stand out.
 I also read that this is apparently a rather common problem --output of a 
 comparator "bouncing" like this-- and that the solution is hysteresis. I'm 
 going to look into adding hysteresis and see if that solves the problem.
+
+UPDATE: Wednesday February 19 2014 0100:
+
+Adding hysteresis doesn't seem to help.
+
+Observation, when I trigger off of LINE rather than INT, the noise 
+disappears completely, which indicates to me that there is indeed 60 Hz hum 
+that's leaking in. On the Vcc supply rail, I don't read more than 5 mV of 
+ripple though, and adding a 100nF ceramic cap diminishes this down to 2 mV or 
+so, but doesn't get rid of it completely.
+
+I'm going to bring the circuit in tomorrow and see if there's a limitation 
+with my scope.
+
+Also, I'm letting the RNG run through the night. Going to see if it can pass 
+ANY of the dieharder RNG tests.
