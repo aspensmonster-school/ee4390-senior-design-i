@@ -23,3 +23,12 @@ comparator readings.
 3.) I've got the wrong voltage on the output of the comparator.
 
 I'm suspecting number 3. Going to investigate.
+
+UPDATE: Tuesday February 18 2014 1837:
+
+Yep. I had the output voltage wrong. I didn't realize you could have a 
+different Vcc and Vs --Vs being the voltage on the output pin-- on he 
+comparator. After doing that, I've got a nice, clean 5V and 0V line. And the 
+data is now starting to look somewhat random. Still getting what (seems) to be 
+some pattern though. Going to let it collect for tonight and see what 
+dieharder says about the sequence in the morning.
