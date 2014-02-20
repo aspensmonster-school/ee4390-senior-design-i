@@ -20,4 +20,5 @@ my $binary = unpack('B*',$file);
 #if you don't do this then the contents get held in a buffer until the file 
 #closes. As you can see, the file never closes! Shame on me...
 
-print $outputFile pack('B*',$binary);
+print vec($binary,0,8);
+##print $outputFile pack('B*',$binary);
