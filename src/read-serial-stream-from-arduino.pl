@@ -10,7 +10,7 @@ use Data::Dumper;
 my $arduino = Device::SerialPort->new("/dev/ttyACM0") || 
 die "Can't open serial port.\n";
 
-$arduino->baudrate(9600);
+$arduino->baudrate(115200);
 $arduino->databits(8);
 $arduino->parity('none');
 $arduino->stopbits(1);
