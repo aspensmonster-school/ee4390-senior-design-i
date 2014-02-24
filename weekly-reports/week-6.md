@@ -15,7 +15,7 @@ hardware. I'll let it collect tonight and examine the results in the morning.
 
 Also: I kept some of the output from before all of my noise fixes --sans the 
 comparator noise issue of course-- and utilized another piece of software 
-(rngtest) to analyze it. Of course it had poor results. However, the output 
+(ent) to analyze it. Of course it had poor results. However, the output 
 I more recently have --after the noise fixes-- has MUCH better results than 
 the original (and incredibly noisy) bitstream. Still not perfect, but things 
 are finally starting to look good. I should be able to start work on the 
