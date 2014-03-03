@@ -25,3 +25,14 @@ integrity issues as they come up.
 I also want to solder a more-permanent version of the design, now that much 
 of the signal integrity issues have been squared away. That's still on the 
 backburner though.
+
+UPDATE: Sunday March 02 2014 2339:
+
+After introducing the debiasing routine onto the arduino, it certainly seems
+(at least at first glance) that the entropy has increased and any remaining
+visual hints of non-randomness are gone. Sadly, the debiasing routine seems to 
+eat up quite a bit of processing time --or perhaps there's just a bunch of 
+correlation/biasing in my RNG. In either case, the throughput has dropped to 
+about 100 bytes every 3 to 5 seconds. If this output stream proves to be 
+better though in terms of randomness and entropy, I'll take it over a faster 
+but flawed implementation.
