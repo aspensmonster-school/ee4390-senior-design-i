@@ -5,7 +5,7 @@ void setup() {
 
 void loop() {
 
-  byte randomByte;
+  byte randomByte = 0;
   int shift = 0;
 
   //while randomByte isn't filled with debiased bits...
@@ -30,7 +30,7 @@ void loop() {
       shift++;
     }
     //If randomByte is filled, write it out to serial.
-    if ( shift == 7 ) {
+    if ( shift == 8 ) {
       Serial.write(randomByte);
     }
     //else, keep going.
