@@ -45,3 +45,17 @@ Probably just picking up 60 Hz hum. In any case, now that the power is on,
 the throughput is picking back up. It's looking like a little bit over a 
 kilobyte a second. Still slower than before the HW debiasing, but still faster 
 than when the circuit wasn't powered :P NOW I will let this run overnight.
+
+UPDATE: Monday March 03 2014 1209:
+
+Well, I'm still getting about the same results statistically, and they 
+aren't where they need to be, regardless of debiasing. Whatever remaining 
+noise on the comparator output needs to be hunted down and eliminated. I 
+propose two possible solutions:
+
+* The output is digital. Perhaps we need to separate digital and analog 
+grounds. I can use the ground on the arduino board for this purpose, I suppose.
+* I need a capacitor between the amplifying op-amp and the comparator. I'm 
+actually leaning towards this being the culprit at the moment, though the 
+separated analog and igital grounds is --from what I've read-- good design 
+practice in any case.
