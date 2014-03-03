@@ -36,3 +36,12 @@ correlation/biasing in my RNG. In either case, the throughput has dropped to
 about 100 bytes every 3 to 5 seconds. If this output stream proves to be 
 better though in terms of randomness and entropy, I'll take it over a faster 
 but flawed implementation.
+
+UPDATE: Sunday March 02 2014 2350:
+
+Uhhh... Wat? So I forgot to turn the power supply on for the circuit. YET IT 
+WAS GETTING BITS? Lolwut? Ok... that's weird... I might look into that later. 
+Probably just picking up 60 Hz hum. In any case, now that the power is on, 
+the throughput is picking back up. It's looking like a little bit over a 
+kilobyte a second. Still slower than before the HW debiasing, but still faster 
+than when the circuit wasn't powered :P NOW I will let this run overnight.
