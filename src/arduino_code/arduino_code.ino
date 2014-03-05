@@ -14,7 +14,8 @@ void loop() {
     //Start Von Neumann debiasing routine. Sample two bits.
     byte randOne = digitalRead(2) & 0x01;
     byte randTwo = digitalRead(2) & 0x01;
-
+    byte randBit = randOne ^ randTwo;
+    /*
     //Bits were same value. discard.
     if (randOne == randTwo) {
       continue;
@@ -29,6 +30,10 @@ void loop() {
       randomByte = randomByte | (randOne<<shift);
       shift++;
     }
+    */
+    //not doing Von Neumann for now. Suspect there might be autocorrelation.
+    randomByte = randomByte | (randBit<<shift);
+    shift++;
     //If randomByte is filled, write it out to serial.
     if ( shift == 8 ) {
       Serial.write(randomByte);
