@@ -59,3 +59,9 @@ grounds. I can use the ground on the arduino board for this purpose, I suppose.
 actually leaning towards this being the culprit at the moment, though the 
 separated analog and igital grounds is --from what I've read-- good design 
 practice in any case.
+
+UPDATE: Tuesday March 04 2014 2012:
+
+At this point, I'm not seeing the noise on the output of the comparator that 
+I used to see. I haven't changed anything though, so this is really 
+irritating me! Regardless, I'm experimenting with different decorrelators.
