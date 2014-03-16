@@ -15,3 +15,14 @@ http://blogs.perl.org/users/david_oswald/2013/02/bytesrandomsecure----a-no-fuss-
 
 I'm going to let my bitstream run, and modify the perl script a bit to 
 incorporate this.
+
+UPDATE Sun 16 2014 1844:
+
+After performing a bitwise XOR of each raw byte from the generator with a 
+byte from a CSPRNG, the tests are performing substantially better (with the 
+exception of the chi^2 test, which is to be expected, since I have the 
+de-biasing code disabled on the arduino for now).
+
+Particularly, the Monte-Carlo calculations of pi are showing MUCH better 
+approximations than previously. Percent error has dropped from 10s of percent, 
+to tenths of a percent.
