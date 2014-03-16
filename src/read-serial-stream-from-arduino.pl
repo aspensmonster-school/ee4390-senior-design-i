@@ -5,7 +5,7 @@ use strict;
 
 use Device::SerialPort;
 use Data::Dumper;
-#use Bytes::Random::Secure;
+use Bytes::Random::Secure;
 
 # Set up the arduino.
 my $arduino = Device::SerialPort->new("/dev/ttyACM0") || 
@@ -17,10 +17,10 @@ $arduino->parity('none');
 $arduino->stopbits(1);
 
 # Set up the CSPRNG
-#my $random = Bytes::Random::Secure->new(
-# Bits => 64,
-# NonBlocking => 0,
-#); #Seed with 8 bytes, use /dev/random (or other blocking)
+my $random = Bytes::Random::Secure->new(
+ Bits => 64,
+ NonBlocking => 0,
+); #Seed with 8 bytes, use /dev/random (or other blocking)
 
 # Set up the destination file where the raw binary is stored.
 my $name = "output";
@@ -46,9 +46,9 @@ while (1) {
   if ( defined($byte) && length($byte) ) {
 
     #XOR with byte from CSPRNG
-    #my $csprng_byte = $random->bytes(1);
-    #
-    #$byte = $byte ^ $csprng_byte;
+    my $csprng_byte = $random->bytes(1);
+    
+    $byte = $byte ^ $csprng_byte;
 
     print "Value: " , $byte, "\n";
 
