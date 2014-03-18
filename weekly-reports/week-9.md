@@ -26,3 +26,9 @@ de-biasing code disabled on the arduino for now).
 Particularly, the Monte-Carlo calculations of pi are showing MUCH better 
 approximations than previously. Percent error has dropped from 10s of percent, 
 to tenths of a percent.
+
+UPDATE Tue Mar 18 2014 1200:
+
+Consider the project working. All that's left is to put the bitstream into a 
+/dev/ device. Shouldn't be too difficult with PERL. Ought to get a head-start 
+on the presentation documents too.
