@@ -32,3 +32,7 @@ UPDATE Tue Mar 18 2014 1200:
 Consider the project working. All that's left is to put the bitstream into a 
 /dev/ device. Shouldn't be too difficult with PERL. Ought to get a head-start 
 on the presentation documents too.
+
+UPDATE Tue Mar 18 2014 1737:
+
+OMG OMG OMG It's passing the dieharder tests! YAY :D
