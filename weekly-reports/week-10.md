@@ -63,31 +63,29 @@ Block Diagrams
 
 The block-diagram/pipeline as it stands:
 
-`
-Transistor in breakdown, generating avalanche noise
-|
 
-|->Buffer between noise source and amplifier.
-   |
-   |->Amplifier to get 1Vpp
-      |
-      |->Comparator to output 5V-level logic.
-         |
-         |->Arduino samples the digital output. Passes bytes to host.
-            |
-            |->(*****) Perl module listens on serial port for a bytes. 
-               XORs each byte with a byte from the CSPRNG.
-               |
-               |->Writes final raw byte to file. (Should eventually write to 
-                  /dev/customRandom)
+    Transistor in breakdown, generating avalanche noise
+    | 
+    |->Buffer between noise source and amplifier.
+       |
+       |->Amplifier to get 1Vpp
+          |
+          |->Comparator to output 5V-level logic.
+             |
+             |->Arduino samples the digital output. Passes bytes to host.
+                |
+                |->(*****) Perl module listens on serial port for a bytes. 
+                   XORs each byte with a byte from the CSPRNG.
+                   |
+                   |->Writes final raw byte to file. (Should eventually write 
+                      to /dev/customRandom)
+    
+    HW noise, typically jitter from HW interrupts.
+    |
+    |->Linux kernel fills the noise into /dev/random
+       |
+       |->/dev/random seeds the CSPRNG. -> (*****)
 
-HW noise, typically jitter from HW interrupts.
-|
-|->Linux kernel fills the noise into /dev/random
-   |
-   |->/dev/random seeds the CSPRNG. -> (*****)
-
-`
 
 Rabbit Holes
 ============
