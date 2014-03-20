@@ -1,7 +1,7 @@
 SPRING BREAK WEEK (From Mon Mar 10 to Tue Mar 18)
 =================================================
 
-UPDATE Sat 15 2014 2105:
+UPDATE Sat Mar 15 2014 2105:
 
 Ok. So I've totally been working on this. Haha. Not. 
 
@@ -16,7 +16,7 @@ http://blogs.perl.org/users/david_oswald/2013/02/bytesrandomsecure----a-no-fuss-
 I'm going to let my bitstream run, and modify the perl script a bit to 
 incorporate this.
 
-UPDATE Sun 16 2014 1844:
+UPDATE Sun Mar 16 2014 1844:
 
 After performing a bitwise XOR of each raw byte from the generator with a 
 byte from a CSPRNG, the tests are performing substantially better (with the 
