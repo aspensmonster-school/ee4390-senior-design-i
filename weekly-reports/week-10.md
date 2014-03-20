@@ -40,12 +40,12 @@ bitstream passes all the tests, I'm leaving off the Von Neumann debiasing for
 now.
   * I've often thought about utilizing a notch filter to reject the signal at
     60 Hz, to absolutely ensure that the bitstream doesn't get autocorrelated
-or otherwise biased off of mains hum.  Off of the 60 Hz noise that I was unable
-to eliminate after getting rid of all the ground loops I thought I could
-identify.  However, doing this would require reinstating the Von Neumann
-debiasing routines to make sure we can the regular sequences of many zeros that
-would result. The net result is that the RNG would still be slow, but might be
-able to cast off the need for XORing with a CSPRNG.
+or otherwise biased off of the mains hum  that I was unable to eliminate after
+getting rid of all the ground loops I thought I could identify.  However, doing
+this would require reinstating the Von Neumann debiasing routines to make sure
+we can the regular sequences of many zeros that would result. The net result is
+that the RNG would still be slow, but might be able to cast off the need for
+XORing with a CSPRNG.
   * Wikipedia seems to indicate that some high-speed hardware RNGs utilize
     feedback to help with biasing, but give no real indication of just what
 kind of feedback. I don't see how any analog feedback could be happening
