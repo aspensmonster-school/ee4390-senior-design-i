@@ -19,3 +19,4 @@ More links to reference
   * "DIE GROUND LOOPS DIE" - http://www.edn.com/electronics-blogs/signal-integrity/4403657/Ground-loops
   * "Analog vs Digital ground" - http://analogvsdigitalground.blogspot.com/p/various-grounds.html
   * "Grounding Demystified" - http://www.celectronics.com/seminar/sample/IEEE11-9-05.pdf
+  * "Apparently the world's foremost expert on ground loops" - http://www.jensen-transformers.com/an/generic%20seminar.pdf
