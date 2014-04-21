@@ -20,3 +20,4 @@ More links to reference
   * "Analog vs Digital ground" - http://analogvsdigitalground.blogspot.com/p/various-grounds.html
   * "Grounding Demystified" - http://www.celectronics.com/seminar/sample/IEEE11-9-05.pdf
   * "Apparently the world's foremost expert on ground loops" - http://www.jensen-transformers.com/an/generic%20seminar.pdf
+  * "Both pink and white noise exist in amplifiers and other semiconductors" - http://www.edn.com/electronics-blogs/the-signal/4408242/1-f-Noise-the-flickering-candle-
