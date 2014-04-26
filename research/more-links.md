@@ -21,3 +21,8 @@ More links to reference
   * "Grounding Demystified" - http://www.celectronics.com/seminar/sample/IEEE11-9-05.pdf
   * "Apparently the world's foremost expert on ground loops" - http://www.jensen-transformers.com/an/generic%20seminar.pdf
   * "Both pink and white noise exist in amplifiers and other semiconductors" - http://www.edn.com/electronics-blogs/the-signal/4408242/1-f-Noise-the-flickering-candle-
+  * "Comparing de-biasing routines" http://www1.spms.ntu.edu.sg/~kkhoongm/Entropy.pdf
+  * "Lots of links to other resources" http://www.cs.berkeley.edu/~daw/rnd/
+  * "haven't looked at" https://www.merrymeet.com/jon/usingrandom.html#RTFToC1
+  * "haven't looked at" http://www.ciphersbyritter.com/RES/NOISE.HTM
+  * "haven't looked at" http://world.std.com/~reinhold/truenoise.html
